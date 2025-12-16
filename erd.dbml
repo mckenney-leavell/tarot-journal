@@ -1,0 +1,41 @@
+Table User {
+    id int
+    name varchar
+    email varchar
+    password varchar
+}
+
+Table Card {
+    id int
+    name varchar
+    value_id int [ref: > Value.id]
+    element_id int [ref: > Element.id]
+    major_archana bool
+    meaning_upright varchar
+    meaning_reverse varchar
+}
+
+// Suits, numbers
+Table Value {
+    id int
+    type varchar
+}
+
+// Cups, wands, etc.
+Table Element {
+    id int
+    type varchar
+}
+
+Table Spread {
+    id int
+    user_id int [ref: < User.id]
+    created_date date
+    interpretation varchar
+}
+
+Table SpreadCard {
+    id int
+    card_id int [ref: > Card.id]
+    spread_id int [ref: > Spread.id]
+}
