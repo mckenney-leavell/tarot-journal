@@ -1,0 +1,100 @@
+[
+    {
+        "pk": 1,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Ace"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Two"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Three"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Four"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Five"
+        }
+    },    
+    {
+        "pk": 6,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Six"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Seven"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Eight"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Nine"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Ten"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Page"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Knight"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "Queen"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "tarot_journal_api.value",
+        "fields": {
+            "type": "King"
+        }
+    }
+]
