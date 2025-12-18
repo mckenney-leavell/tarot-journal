@@ -1,0 +1,29 @@
+[
+    {
+        "pk": 1,
+        "model": "tarot_journal_api.spread",
+        "fields": {
+            "user": 3,
+            "created_date": "2025-12-01",
+            "interpretation": "There are big changes coming your way--trust your intuition."
+        }
+    },
+    {
+        "pk": 2,
+        "model": "tarot_journal_api.spread",
+        "fields": {
+            "user": 2,
+            "created_date": "2025-12-05",
+            "interpretation": "You are ready to find love. Don't forget to look at the bigger picture."
+        }
+    },
+    {
+        "pk": 3,
+        "model": "tarot_journal_api.spread",
+        "fields": {
+            "user": 3,
+            "created_date": "2025-12-02",
+            "interpretation": "Quit your job and move abroad."
+        }
+    }
+]
