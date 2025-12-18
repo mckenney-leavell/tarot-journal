@@ -1,0 +1,82 @@
+[
+    {
+        "pk": 1,
+        "model": "tarot_journal_api.spreadcard",
+        "fields": {
+            "card": 7,
+            "spread": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "tarot_journal_api.spreadcard",
+        "fields": {
+            "card": 13,
+            "spread": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "tarot_journal_api.spreadcard",
+        "fields": {
+            "card": 44,
+            "spread": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "tarot_journal_api.spreadcard",
+        "fields": {
+            "card": 37,
+            "spread": 2
+        }
+    },
+    {
+        "pk": 5,
+        "model": "tarot_journal_api.spreadcard",
+        "fields": {
+            "card": 21,
+            "spread": 2
+        }
+    },
+    {
+        "pk": 6,
+        "model": "tarot_journal_api.spreadcard",
+        "fields": {
+            "card": 52,
+            "spread": 2
+        }
+    },
+    {
+        "pk": 7,
+        "model": "tarot_journal_api.spreadcard",
+        "fields": {
+            "card": 8,
+            "spread": 2
+        }
+    },
+    {
+        "pk": 8,
+        "model": "tarot_journal_api.spreadcard",
+        "fields": {
+            "card": 29,
+            "spread": 2
+        }
+    },
+    {
+        "pk": 9,
+        "model": "tarot_journal_api.spreadcard",
+        "fields": {
+            "card": 40,
+            "spread": 2
+        }
+    },
+    {
+        "pk": 10,
+        "model": "tarot_journal_api.spreadcard",
+        "fields": {
+            "card": 44,
+            "spread": 2
+        }
+    }
+]
