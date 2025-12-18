@@ -10,7 +10,7 @@ Table Card {
     name varchar
     value_id int [ref: > Value.id]
     element_id int [ref: > Element.id]
-    major_archana bool
+    major_arcana bool
     meaning_upright varchar
     meaning_reverse varchar
 }
