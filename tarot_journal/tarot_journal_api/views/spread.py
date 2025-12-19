@@ -141,3 +141,37 @@ class Spreads(ViewSet):
         
         except Exception as ex:
             return Response({"message": ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+# edit title, interpretation, or spreadcards, including deleting existing cards
+
+    def update(self, request, pk=None):
+        """
+        @api {PUT} /spread/:id PUT changes for spread
+        @apiName UpdateSpread
+        @apiGroup Spreads
+
+        @apiHeader {String} Authorization Auth token
+        @apiHeaderExample {String} Authorization
+            Token 9ba45f09651c5b0c404f37a2d2572c026c146611pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P
+
+        @apiParam {id} id Spread Id route parameter
+
+        @apiSuccessExample {json} Success
+            HTTP/1.1 204 No Content
+        """
+                
+        try:
+            # user = request.auth.user
+            spread = Spread.objects.get(pk=pk)
+            spread.title = request.data["title"]
+            spread.interpretation = request.data["interpretation"]
+
+            spread.save()
+
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
+
+        except Spread.DoesNotExist as ex:
+            return Response({"message": ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        
+        except Exception as ex:
+            return Response({"message": ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
