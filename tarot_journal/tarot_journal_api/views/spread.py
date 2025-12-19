@@ -80,4 +80,37 @@ class Spreads(ViewSet):
         except Exception as ex:
             return HttpResponseServerError(ex)
 
-    # def list(self, request):
+    def list(self, request):
+        """
+        @api {GET} /spreads GET user spreads
+        @apiName GetSpreads
+        @apiGroup Spreads
+
+        @apiHeader {String} Authorization Auth token
+        @apiHeaderExample {String} Authorization
+            Token 9ba45f09651c5b0c404f37a2d2572c026c146611pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=
+
+
+        @apiSuccess (200) {id} id Spread id
+        @apiSuccess (200) {String} url Spread URI
+        @apiSuccess (200) {String} user User URI
+        @apiSuccess (200) {String} created_date Date spread was created
+        @apiSuccess (200) {String} interpretation User's interpretation input
+
+        @apiSuccessExample {json} Success
+            [
+                {
+                    "id": 1,
+                    "url": "http://localhost:8000/spreads/1",
+                    "user": "http://localhost:8000/users/3"
+                    "created_date": "2025-12-01",
+                    "interpretation": "There are big changes coming your way--trust your intuition."
+                }
+            ]
+        """
+        user=request.auth.user
+        spreads = Spread.objects.filter(user=user)
+
+        json_spreads = SpreadSerializer(spreads, many=True, context={"request": request})
+
+        return Response(json_spreads.data)
