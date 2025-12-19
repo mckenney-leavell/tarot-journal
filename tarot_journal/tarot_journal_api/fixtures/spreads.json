@@ -4,6 +4,7 @@
         "model": "tarot_journal_api.spread",
         "fields": {
             "user": 3,
+            "title": "Career Spread",
             "created_date": "2025-12-01",
             "interpretation": "There are big changes coming your way--trust your intuition."
         }
@@ -13,6 +14,7 @@
         "model": "tarot_journal_api.spread",
         "fields": {
             "user": 2,
+            "title": "Should I start dating again?",
             "created_date": "2025-12-05",
             "interpretation": "You are ready to find love. Don't forget to look at the bigger picture."
         }
@@ -22,6 +24,7 @@
         "model": "tarot_journal_api.spread",
         "fields": {
             "user": 3,
+            "title": "What should I do with my life?",
             "created_date": "2025-12-02",
             "interpretation": "Quit your job and move abroad."
         }

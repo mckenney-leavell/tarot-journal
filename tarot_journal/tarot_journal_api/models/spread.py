@@ -8,6 +8,11 @@ class Spread(models.Model):
         on_delete=models.DO_NOTHING,
     )
 
+    title = models.CharField(
+        max_length=200,
+        default='Untitled Spread'
+    )
+
     created_date = models.DateField(
         default="0000-00-00",
     )
