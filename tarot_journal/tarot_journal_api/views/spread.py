@@ -29,7 +29,8 @@ class SpreadSerializer(serializers.HyperlinkedModelSerializer):
         fields = (
             'id', 
             'url',
-            'user', 
+            'user',
+            'title',
             'created_date', 
             'interpretation',
         )
@@ -58,7 +59,8 @@ class Spreads(ViewSet):
             {
                 "id": 1,
                 "url": "http://localhost:8000/spreads/1",
-                "user": "http://localhost:8000/users/3"
+                "user": "http://localhost:8000/users/3",
+                "title": "Career Spread",
                 "created_date": "2025-12-01",
                 "interpretation": "There are big changes coming your way--trust your intuition."
             }
@@ -103,6 +105,7 @@ class Spreads(ViewSet):
                     "id": 1,
                     "url": "http://localhost:8000/spreads/1",
                     "user": "http://localhost:8000/users/3"
+                    "title": "Career Spread"
                     "created_date": "2025-12-01",
                     "interpretation": "There are big changes coming your way--trust your intuition."
                 }
