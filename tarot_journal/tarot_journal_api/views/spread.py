@@ -114,3 +114,30 @@ class Spreads(ViewSet):
         json_spreads = SpreadSerializer(spreads, many=True, context={"request": request})
 
         return Response(json_spreads.data)
+
+    def destroy(self, request, pk=None):
+        """
+            @api {DELETE} /spreads/:id DELETE product
+            @apiName DeleteProduct
+            @apiGroup Spread
+
+            @apiHeader {String} Authorization Auth token
+            @apiHeaderExample {String} Authorization
+                Token 9ba45f09651c5b0c404f37a2d2572c026c146611pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P
+
+            @apiParam {id} id Spread Id to delete
+            @apiSuccessExample {json} Success
+                HTTP/1.1 204 No Content
+        """
+        try:
+            user = request.auth.user
+            spread = Spread.objects.get(pk=pk, user=user)
+            spread.delete()
+
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
+        
+        except Spread.DoesNotExist as ex:
+            return Response({"message": ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        
+        except Exception as ex:
+            return Response({"message": ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
