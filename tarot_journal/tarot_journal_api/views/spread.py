@@ -7,7 +7,8 @@ from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
 from django.contrib.auth.models import User
-from tarot_journal_api.models import Spread
+from tarot_journal_api.models import Spread, SpreadCard
+from .spread_card import SpreadCardSerializer
 
 class UserSpreadSerializer(serializers.ModelSerializer):
     """JSON serializer"""
@@ -19,6 +20,7 @@ class UserSpreadSerializer(serializers.ModelSerializer):
 class SpreadSerializer(serializers.HyperlinkedModelSerializer):
     """JSON serializer for user spreads"""
     user = UserSpreadSerializer(many=False)
+    spread_cards = SpreadCardSerializer(many=True)
 
     class Meta:
         model = Spread
@@ -33,6 +35,7 @@ class SpreadSerializer(serializers.HyperlinkedModelSerializer):
             'title',
             'created_date', 
             'interpretation',
+            'spread_cards',
         )
 
 class Spreads(ViewSet):
@@ -121,7 +124,7 @@ class Spreads(ViewSet):
     def destroy(self, request, pk=None):
         """
             @api {DELETE} /spreads/:id DELETE product
-            @apiName DeleteProduct
+            @apiName DeleteSpread
             @apiGroup Spread
 
             @apiHeader {String} Authorization Auth token
@@ -144,8 +147,6 @@ class Spreads(ViewSet):
         
         except Exception as ex:
             return Response({"message": ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        
-# edit title, interpretation, or spreadcards, including deleting existing cards
 
     def update(self, request, pk=None):
         """

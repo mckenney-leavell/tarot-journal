@@ -6,10 +6,11 @@ class SpreadCard(models.Model):
 
     card = models.ForeignKey(
         Card,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
     )
 
     spread = models.ForeignKey(
         Spread,
         on_delete=models.CASCADE,
+        related_name="spread_cards"
     )

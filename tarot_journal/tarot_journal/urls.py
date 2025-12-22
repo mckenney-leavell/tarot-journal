@@ -26,6 +26,7 @@ from tarot_journal_api.views import *
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r"users", Users, "user")
 router.register(r"spreads", Spreads, "spread")
+router.register(r"spreadcards", SpreadCards, "spreadcard")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
