@@ -9,6 +9,7 @@ from rest_framework import status
 from django.contrib.auth.models import User
 from tarot_journal_api.models import Spread, SpreadCard
 from .spread_card import SpreadCardSerializer
+import datetime
 
 class UserSpreadSerializer(serializers.ModelSerializer):
     """JSON serializer"""
@@ -179,3 +180,45 @@ class Spreads(ViewSet):
         
         except Exception as ex:
             return Response({"message": ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+    def create(self, request):
+        """
+        @api {POST} /spread POST new spread
+        @apiName CreateSpreadCard
+        @apiGroup SpreadCard
+
+        @apiHeader {String} Authorization Auth token
+        @apiHeaderExample {String} Authorization
+            Token 9ba45f09651c5b0c404f37a2d2572c026c146611pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P
+
+        @apiSuccess (200) {Object} spread Created spread
+        @apiSuccess (200) {id} spread.id spread Id
+        @apiSuccess (200) {Object} spread.interpretation User interpretation of spread meaning
+        @apiSuccess (200) {Object} spread.user User who created spread
+        @apiSuccess (200) {Object} spread.title Title of spread
+        @apiSuccess (200) {Object} spread.created_date Date when spread was created
+        @apiSuccessExample {json} Success
+            {
+                "id": 12,
+                "url": "http://localhost:8000/spreads/12",
+                "interpretation": "User interpretation of spread",
+                "user": 3,
+                "title": "Spread Title",
+                "create_date": "2025-12-20"
+            }                
+
+        """
+
+        new_spread = Spread()
+        new_spread.interpretation = request.data["interpretation"]
+        new_spread.title = request.data["title"]
+        new_spread.created_date = datetime.date.today()
+
+        creator = request.auth.user
+        new_spread.user = creator
+
+        new_spread.save()
+
+        serializer = SpreadSerializer(new_spread, context={"request": request})
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
