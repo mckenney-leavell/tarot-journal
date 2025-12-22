@@ -5,13 +5,23 @@ from rest_framework import serializers
 from rest_framework import status
 from tarot_journal_api.models import SpreadCard, Spread, Card
 
+class CardSerializer(serializers.ModelSerializer):
+    """JSON serializer for cards"""
+
+    class Meta:
+        model = Card
+        url = serializers.HyperlinkedIdentityField(
+            view_name="card", lookup_field="id"
+        )
+        fields = "__all__"
+
 class SpreadCardSerializer(serializers.ModelSerializer):
     """JSON serializer"""
+    card = CardSerializer(many=False)
 
     class Meta:
         model = SpreadCard
         fields = ( 'id', 'card', 'spread' )
-        # depth = 1
 
 class SpreadCards(ViewSet):
     """View for interacting with spread cards"""
