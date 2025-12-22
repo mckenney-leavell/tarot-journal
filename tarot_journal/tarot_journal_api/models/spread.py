@@ -5,7 +5,7 @@ class Spread(models.Model):
 
     user = models.ForeignKey(
         User,
-        on_delete=models.DO_NOTHING,
+        on_delete=models.CASCADE,
     )
 
     title = models.CharField(

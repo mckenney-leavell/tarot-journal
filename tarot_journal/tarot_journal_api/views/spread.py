@@ -121,7 +121,7 @@ class Spreads(ViewSet):
     def destroy(self, request, pk=None):
         """
             @api {DELETE} /spreads/:id DELETE product
-            @apiName DeleteProduct
+            @apiName DeleteSpread
             @apiGroup Spread
 
             @apiHeader {String} Authorization Auth token
@@ -144,8 +144,6 @@ class Spreads(ViewSet):
         
         except Exception as ex:
             return Response({"message": ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        
-# edit title, interpretation, or spreadcards, including deleting existing cards
 
     def update(self, request, pk=None):
         """
