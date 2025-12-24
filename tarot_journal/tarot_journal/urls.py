@@ -27,6 +27,7 @@ router = routers.DefaultRouter(trailing_slash=False)
 router.register(r"users", Users, "user")
 router.register(r"spreads", Spreads, "spread")
 router.register(r"spreadcards", SpreadCards, "spreadcard")
+router.register(r"cards", Cards, "card")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
