@@ -29,3 +29,5 @@ class Card(models.Model):
     meaning_upright = models.TextField()
 
     meaning_reverse = models.TextField()
+
+    url = models.CharField(null=True)

@@ -24,7 +24,7 @@ class CardSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Card
-        fields = ( 'id', 'name', 'major_arcana', 'meaning_upright', 'meaning_reverse', 'element', 'value')
+        fields = ( 'id', 'name', 'major_arcana', 'meaning_upright', 'meaning_reverse', 'element', 'value', 'url' ) 
 
 class Cards(ViewSet):
     """View for interacting with cards"""
@@ -47,7 +47,8 @@ class Cards(ViewSet):
                     "user": "http://localhost:8000/users/3"
                     "title": "Career Spread"
                     "created_date": "2025-12-01",
-                    "interpretation": "There are big changes coming your way--trust your intuition."
+                    "interpretation": "There are big changes coming your way--trust your intuition.",
+                    "url": "url.example"
                 }
             ]
         """
