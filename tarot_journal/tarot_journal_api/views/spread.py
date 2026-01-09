@@ -10,6 +10,7 @@ from django.contrib.auth.models import User
 from tarot_journal_api.models import Spread, SpreadCard
 from .spread_card import SpreadCardSerializer
 import datetime
+from operator import itemgetter
 
 class UserSpreadSerializer(serializers.ModelSerializer):
     """JSON serializer"""
@@ -116,8 +117,8 @@ class Spreads(ViewSet):
             ]
         """
         user=request.auth.user
-        spreads = Spread.objects.filter(user=user)
-
+        spreads = Spread.objects.filter(user=user).order_by('-created_date')
+    
         json_spreads = SpreadSerializer(spreads, many=True, context={"request": request})
 
         return Response(json_spreads.data)
