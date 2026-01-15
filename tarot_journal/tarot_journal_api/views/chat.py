@@ -1,21 +1,28 @@
-from rest_framework.response import Response
-from rest_framework import status
-from django.http import HttpResponseServerError
+# from rest_framework.response import Response
+# from rest_framework import status
+# # from django.http import HttpResponseServerError
+# from django.views.decorators.csrf import csrf_exempt
+# from django.conf import settings
+# import json
+# from openai import OpenAI
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 import json
 from openai import OpenAI
 
 client = OpenAI(api_key=settings.OPENAI_API_KEY)
 
+@csrf_exempt
 def chat(request):
     """Function making request to OpenAI"""
     if request.method == 'POST':
         try:
             data = json.loads(request.body)
-            user_input = data.get('input')
+            user_input = data.get('message')
 
             completion = client.chat.completions.create(
-                model="gpt-5-nano",
+                model="gpt-3.5-turbo",
                 messages=[
                     {"role": "user", "content": user_input}
                 ]
@@ -23,7 +30,7 @@ def chat(request):
 
             ai_reply = completion.choices[0].message.content
 
-            return Response({'reply': ai_reply}, status=status.HTTP_201_CREATED)
+            return JsonResponse({'reply': ai_reply})
 
         except Exception as ex:
-            return Response({"message": ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return JsonResponse({'error': str(ex)}, status=500)
