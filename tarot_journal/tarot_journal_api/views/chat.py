@@ -24,6 +24,10 @@ def chat(request):
             completion = client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
+                    {
+                        "role": "system", 
+                        "content": "You are a search engine that returns short, 2 sentence interpretations of tarot readings. Interpret the overall meaning of the user's reading based on the title and the spread cards included. Base the interpretation of the reading based on the cards pulled and use the title as the prompt for the reading."
+                    },
                     {"role": "user", "content": user_input}
                 ]
             )
