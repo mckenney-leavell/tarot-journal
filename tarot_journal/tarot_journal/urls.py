@@ -25,6 +25,9 @@ from tarot_journal_api.views import *
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r"users", Users, "user")
+router.register(r"spreads", Spreads, "spread")
+router.register(r"spreadcards", SpreadCards, "spreadcard")
+router.register(r"cards", Cards, "card")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,4 +36,5 @@ urlpatterns = [
     path("login", login_user),
     path("api-token-auth", obtain_auth_token),
     path("api-auth", include("rest_framework.urls", namespace="rest_framework")),
+    path("api/chat/", chat)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

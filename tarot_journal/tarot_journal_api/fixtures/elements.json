@@ -1,0 +1,30 @@
+[
+    {
+        "pk": 1,
+        "model": "tarot_journal_api.element",
+        "fields": {
+            "type": "Cups"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "tarot_journal_api.element",
+        "fields": {
+            "type": "Swords"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "tarot_journal_api.element",
+        "fields": {
+            "type": "Pentacles"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "tarot_journal_api.element",
+        "fields": {
+            "type": "Wands"
+        }
+    }
+]

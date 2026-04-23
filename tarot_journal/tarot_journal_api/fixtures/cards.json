@@ -1,0 +1,1016 @@
+[
+    {
+        "pk": 1,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Fool",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Beginnings, innocence, spontaneity, a free spirit",
+            "meaning_reverse": "Holding back, recklessness, risk-taking",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-00.png"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Magician",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Manifestation, resourcefulness, power, inspired action",
+            "meaning_reverse": "Manipulation, poor planning, untapped talents",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-01.png"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The High Priestess",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Intuition, sacred knowledge, divine feminine, the subconscious mind",
+            "meaning_reverse": "Secrets, disconnected from intuition, withdrawal and silence",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-02.png"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Empress",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Femininity, beauty, nature, nurturing, abundance",
+            "meaning_reverse": "Creative block, dependence on others",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-03.png"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Emperor",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Authority, establishment, structure, a father figure",
+            "meaning_reverse": "Domination, excessive control, lack of discipline, inflexibility",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-04.png"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Hierophant",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Spiritual wisdom, religious beliefs, conformity, tradition, institutions",
+            "meaning_reverse": "Personal beliefs, freedom, challenging the status quo",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-05.png"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Lovers",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Love, harmony, relationships, values alignment, choices",
+            "meaning_reverse": "Self-love, disharmony, imbalance, misalignment of values",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-06.png"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Chariot",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Control, willpower, success, action, determination",
+            "meaning_reverse": "Self-discipline, opposition, lack of direction",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-07.png"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Strength",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Strength, courage, persuasion, influence, compassion",
+            "meaning_reverse": "Inner strength, self-doubt, low energy, raw emotion",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-08.png"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Hermit",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Soul searching, introspection, being alone, inner guidance",
+            "meaning_reverse": "Isolation, loneliness, withdrawal",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-09.png"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Wheel of Fortune",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Good luck, karma, life cycles, destiny, a turning point",
+            "meaning_reverse": "Bad luck, resistance to change, breaking cycles",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-10.png"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Justice",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Justice, fairness, truth, cause and effect, law",
+            "meaning_reverse": "Unfairness, lack of accountability, dishonesty",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-11.png"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Hanged Man",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Pause, surrender, letting go, new perspectives",
+            "meaning_reverse": "Delays, resistance, stalling, indecision",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-12.png"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Death",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Endings, change, transformation, transition",
+            "meaning_reverse": "Resistance to change, personal transformation, inner purging",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-13.png"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Temperance",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Balance, moderation, patience, purpose",
+            "meaning_reverse": "Imbalance, excess, self-healing, re-alignment",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-14.png"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Devil",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Shadow self, attachment, addiction, restriction, sexuality",
+            "meaning_reverse": "Releasing limiting beliefs, exploring dark thoughts, detachment",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-15.png"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Tower",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Sudden change, upheaval, chaos, revelation, awakening",
+            "meaning_reverse": "Personal transformation, fear of change, averting disaster",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-16.png"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Star",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Hope, faith, purpose, renewal, spirituality",
+            "meaning_reverse": "Lack of faith, despair, self-trust, disconnection",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-17.png"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Moon",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Illusion, fear, anxiety, subconscious, intuition",
+            "meaning_reverse": "Release of fear, repressed emotion, inner confusion",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-18.png"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The Sun",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Positivity, fun, warmth, success, vitality",
+            "meaning_reverse": "Inner child, feeling down, overly optimistic",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-19.png"
+        }
+    },
+    {
+        "pk": 21,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Judgement",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Judgement, rebirth, inner calling, absolution",
+            "meaning_reverse": "Self-doubt, inner critic, ignoring the call",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-20.png"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "The World",
+            "value_id": null,
+            "element_id": null,
+            "major_arcana": true,
+            "meaning_upright": "Completion, integration, accomplishment, travel",
+            "meaning_reverse": "Seeking personal closure, short-cuts, delays",
+            "url": "https://steve-p.org/cards/pix/RWSa-T-21.png"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Ace of Cups",
+            "value_id": 1,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Love, new relationships, compassion, creativity",
+            "meaning_reverse": "Self-love, intuition, repressed emotions",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-0A.png"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Two of Cups",
+            "value_id": 2,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Unified love, partnership, mutual attraction",
+            "meaning_reverse": "Self-love, break-ups, disharmony, distrust",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-02.png"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Three of Cups",
+            "value_id": 3,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Celebration, friendship, creativity, collaborations",
+            "meaning_reverse": "Independence, alone time, hardcore partying, 'three's a crowd'",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-03.png"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Four of Cups",
+            "value_id": 4,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Meditation, contemplation, apathy, reevaluation",
+            "meaning_reverse": "Retreat, withdrawal, checking in for alignment",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-04.png"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Five of Cups",
+            "value_id": 5,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Regret, failure, disappointment, pessimism",
+            "meaning_reverse": "Personal setbacks, self-forgiveness, moving on",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-05.png"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Six of Cups",
+            "value_id": 6,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Revisiting the past, childhood memories, innocence, joy",
+            "meaning_reverse": "Living in the past, forgiveness, lacking playfulness",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-06.png"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Seven of Cups",
+            "value_id": 7,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Opportunities, choices, wishful thinking, illusion",
+            "meaning_reverse": "Alignment, personal values, overwhelmed by choices",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-07.png"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Eight of Cups",
+            "value_id": 8,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Disappointment, abandonment, withdrawal, escapism",
+            "meaning_reverse": "Trying one more time, indecision, aimless drifting, walking away",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-08.png"
+        }
+    },
+    {
+        "pk": 31,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Nine of Cups",
+            "value_id": 9,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Contentment, satisfaction, gratitude, wish come true",
+            "meaning_reverse": "Inner happiness, materialism, dissatisfaction, indulgence",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-09.png"
+        }
+    },
+    {
+        "pk": 32,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Ten of Cups",
+            "value_id": 10,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Divine love, blissful relationships, harmony, alignment",
+            "meaning_reverse": "Disconnection, misaligned values, struggling relationships",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-10.png"
+        }
+    },
+    {
+        "pk": 33,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Page of Cups",
+            "value_id": 11,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Creative opportunities, intuitive messages, curiosity, possibility",
+            "meaning_reverse": "New ideas, doubting intuition, creative blocks, emotional immaturity",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-J1.png"
+        }
+    },
+    {
+        "pk": 34,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Knight of Cups",
+            "value_id": 12,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Creativity, romance, charm, imagination, beauty",
+            "meaning_reverse": "Overactive imagination, unrealistic, jealous, moody",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-J2.png"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Queen of Cups",
+            "value_id": 13,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Compassionate, caring, emotionally stable, intuitive, in flow",
+            "meaning_reverse": "Inner feelings, self-care, self-love, co-dependency",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-QU.png"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "King of Cups",
+            "value_id": 14,
+            "element_id": 1,
+            "major_arcana": false,
+            "meaning_upright": "Emotionally balanced, compassionate, diplomatic",
+            "meaning_reverse": "Self-compassion, inner feelings, moodiness, emotionally manipulative",
+            "url": "https://steve-p.org/cards/pix/RWSa-C-KI.png"
+        }
+    },
+    {
+        "pk": 37,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Ace of Swords",
+            "value_id": 1,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Breakthroughs, new ideas, mental clarity, success",
+            "meaning_reverse": "Inner clarity, re-thinking an idea, clouded judgement",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-0A.png"
+        }
+    },
+    {
+        "pk": 38,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Two of Swords",
+            "value_id": 2,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Difficult decisions, weighing up options, an impasse, avoidance",
+            "meaning_reverse": "Indecision, confusion, information overload, stalemate",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-02.png"
+        }
+    },
+    {
+        "pk": 39,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Three of Swords",
+            "value_id": 3,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Heartbreak, emotional pain, sorrow, grief, hurt",
+            "meaning_reverse": "Negative self-talk, releasing pain, optimism, forgiveness",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-03.png"
+        }
+    },
+    {
+        "pk": 40,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Four of Swords",
+            "value_id": 4,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Rest, relaxation, meditation, contemplation, recuperation",
+            "meaning_reverse": "Exhaustion, burn-out, deep contemplation, stagnation",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-04.png"
+        }
+    },
+    {
+        "pk": 41,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Five of Swords",
+            "value_id": 5,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Conflict, disagreements, competition, defeat, winning at all costs",
+            "meaning_reverse": "Reconciliation, making amends, past resentment",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-05.png"
+        }
+    },
+    {
+        "pk": 42,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Six of Swords",
+            "value_id": 6,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Transition, change, rite of passage, releasing baggage",
+            "meaning_reverse": "Personal transition, resistance to change, unfinished business",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-06.png"
+        }
+    },
+    {
+        "pk": 43,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Seven of Swords",
+            "value_id": 7,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Betrayal, deception, getting away with something, acting strategically",
+            "meaning_reverse": "Imposter syndrome, self-deceit, keeping secrets",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-07.png"
+        }
+    },
+    {
+        "pk": 44,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Eight of Swords",
+            "value_id": 8,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Negative thoughts, self-imposed restriction, imprisonment, victim mentality",
+            "meaning_reverse": "Self-limiting beliefs, inner critic, releasing negative thoughts, open to new perspectives",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-08.png"
+        }
+    },
+    {
+        "pk": 45,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Nine of Swords",
+            "value_id": 9,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Anxiety, worry, fear, depression, nightmares",
+            "meaning_reverse": "Inner turmoil, deep-seated fears, secrets, releasing worry",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-09.png"
+        }
+    },
+    {
+        "pk": 46,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Ten of Swords",
+            "value_id": 10,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Painful endings, deep wounds, betrayal, loss, crisis",
+            "meaning_reverse": "Recovery, regeneration, resisting an inevitable end",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-10.png"
+        }
+    },
+    {
+        "pk": 47,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Page of Swords",
+            "value_id": 11,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "New ideas, curiosity, thirst for knowledge, new ways of communicating",
+            "meaning_reverse": "Self-expression, all talk and no action, haphazard action, haste",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-J1.png"
+        }
+    },
+    {
+        "pk": 48,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Knight of Swords",
+            "value_id": 12,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Ambitious, action-oriented, driven to succeed, fast-thinking",
+            "meaning_reverse": "Restless, unfocused, impulsive, burn-out",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-J2.png"
+        }
+    },
+    {
+        "pk": 49,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Queen of Swords",
+            "value_id": 13,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Independent, unbiased judgement, clear boundaries, direct communication",
+            "meaning_reverse": "Overly-emotional, easily influenced, bitchy, cold-hearted",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-QU.png"
+        }
+    },
+    {
+        "pk": 50,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "King of Swords",
+            "value_id": 14,
+            "element_id": 2,
+            "major_arcana": false,
+            "meaning_upright": "Mental clarity, intellectual power, authority, truth",
+            "meaning_reverse": "Quiet power, inner truth, misuse of power, manipulation",
+            "url": "https://steve-p.org/cards/pix/RWSa-S-KI.png"
+        }
+    },
+    {
+        "pk": 51,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Ace of Pentacles",
+            "value_id": 1,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "A new financial or career opportunity, manifestation, abundance",
+            "meaning_reverse": "Lost opportunity, lack of planning, scarcity mindset",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-0A.png"
+        }
+    },
+    {
+        "pk": 52,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Two of Pentacles",
+            "value_id": 2,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Multiple priorities, time management, prioritisation, adaptability",
+            "meaning_reverse": "Over-committed, disorganisation, reprioritisation",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-02.png"
+        }
+    },
+    {
+        "pk": 53,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Three of Pentacles",
+            "value_id": 3,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Teamwork, collaboration, learning, implementation",
+            "meaning_reverse": "Disharmony, misalignment, working alone",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-03.png"
+        }
+    },
+    {
+        "pk": 54,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Four of Pentacles",
+            "value_id": 4,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Saving money, security, conservatism, scarcity, control",
+            "meaning_reverse": "Over-spending, greed, self-protection",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-04.png"
+        }
+    },
+    {
+        "pk": 55,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Five of Pentacles",
+            "value_id": 5,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Financial loss, poverty, lack mindset, isolation, worry",
+            "meaning_reverse": "Recovery from financial loss, spiritual poverty",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-05.png"
+        }
+    },
+    {
+        "pk": 56,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Six of Pentacles",
+            "value_id": 6,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Giving, receiving, sharing wealth, generosity, charity",
+            "meaning_reverse": "Self-care, unpaid debts, one-sided charity",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-06.png"
+        }
+    },
+    {
+        "pk": 57,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Seven of Pentacles",
+            "value_id": 7,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Long-term view, sustainable results, perseverance, investment",
+            "meaning_reverse": "Lack of long-term vision, limited success or reward",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-07.png"
+        }
+    },
+    {
+        "pk": 58,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Eight of Pentacles",
+            "value_id": 8,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Apprenticeship, repetitive tasks, mastery, skill development",
+            "meaning_reverse": "Self-development, perfectionism, misdirected activity",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-08.png"
+        }
+    },
+    {
+        "pk": 59,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Nine of Pentacles",
+            "value_id": 9,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Abundance, luxury, self-sufficiency, financial independence",
+            "meaning_reverse": "Self-worth, over-investment in work, hustling",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-09.png"
+        }
+    },
+    {
+        "pk": 60,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Ten of Pentacles",
+            "value_id": 10,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Wealth, financial security, family, long-term success, contribution",
+            "meaning_reverse": "The dark side of wealth, financial failure or loss",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-10.png"
+        }
+    },
+    {
+        "pk": 61,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Page of Pentacles",
+            "value_id": 11,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Manifestation, financial opportunity, skill development",
+            "meaning_reverse": "Lack of progress, procrastination, learn from failure",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-J1.png"
+        }
+    },
+    {
+        "pk": 62,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Knight of Pentacles",
+            "value_id": 12,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Hard work, productivity, routine, conservatism",
+            "meaning_reverse": "Self-discipline, boredom, feeling 'stuck', perfectionism",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-J2.png"
+        }
+    },
+    {
+        "pk": 63,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Queen of Pentacles",
+            "value_id": 13,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Nurturing, practical, providing financially, a working parent",
+            "meaning_reverse": "Financial independence, self-care, work-home conflict",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-QU.png"
+        }
+    },
+    {
+        "pk": 64,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "King of Pentacles",
+            "value_id": 14,
+            "element_id": 3,
+            "major_arcana": false,
+            "meaning_upright": "Wealth, business, leadership, security, discipline, abundance",
+            "meaning_reverse": "Financially inept, obsessed with wealth and status, stubborn",
+            "url": "https://steve-p.org/cards/pix/RWSa-P-KI.png"
+        }
+    },
+    {
+        "pk": 65,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Ace of Wands",
+            "value_id": 1,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Inspiration, new opportunities, growth, potential",
+            "meaning_reverse": "An emerging idea, lack of direction, distractions, delays",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-0A.png"
+        }
+    },
+    {
+        "pk": 66,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Two of Wands",
+            "value_id": 2,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Future planning, progress, decisions, discovery",
+            "meaning_reverse": "Personal goals, inner alignment, fear of unknown, lack of planning",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-02.png"
+        }
+    },
+    {
+        "pk": 67,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Three of Wands",
+            "value_id": 3,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Progress, expansion, foresight, oversees opportunities",
+            "meaning_reverse": "Playing small, lack of foresight, unexpected delays",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-03.png"
+        }
+    },
+    {
+        "pk": 68,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Four of Wands",
+            "value_id": 4,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Celebration, joy, harmony, relaxation, homecoming",
+            "meaning_reverse": "Personal celebration, inner harmony, conflict with others, transition",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-04.png"
+        }
+    },
+    {
+        "pk": 69,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Five of Wands",
+            "value_id": 5,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Conflict, disagreements, competition, tension, diversity",
+            "meaning_reverse": "Inner conflict, conflict avoidance, tension release",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-05.png"
+        }
+    },
+    {
+        "pk": 70,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Six of Wands",
+            "value_id": 6,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Success, public recognition, progress, self-confidence",
+            "meaning_reverse": "Private achievement, personal definition of success, fall from grace, egotism",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-06.png"
+        }
+    },
+    {
+        "pk": 71,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Seven of Wands",
+            "value_id": 7,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Challenge, competition, protection, perseverance",
+            "meaning_reverse": "Exhaustion, giving up, overwhelmed",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-07.png"
+        }
+    },
+    {
+        "pk": 72,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Eight of Wands",
+            "value_id": 8,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Movement, fast paced change, action, alignment, air travel",
+            "meaning_reverse": "Delays, frustration, resisting change, internal alignment",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-08.png"
+        }
+    },
+    {
+        "pk": 73,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Nine of Wands",
+            "value_id": 9,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Resilience, courage, persistence, test of faith, boundaries",
+            "meaning_reverse": "Inner resources, struggle, overwhelm, defensive, paranoia",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-09.png"
+        }
+    },
+    {
+        "pk": 74,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Ten of Wands",
+            "value_id": 10,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Burden, extra responsibility, hard work, completion",
+            "meaning_reverse": "Doing it all, carrying the burden, delegation, release",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-10.png"
+        }
+    },
+    {
+        "pk": 75,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Page of Wands",
+            "value_id": 11,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Inspiration, ideas, discovery, limitless potential, free spirit",
+            "meaning_reverse": "Newly-formed ideas, redirecting energy, self-limiting beliefs, a spiritual path",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-J1.png"
+        }
+    },
+    {
+        "pk": 76,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Knight of Wands",
+            "value_id": 12,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Energy, passion, inspired action, adventure, impulsiveness",
+            "meaning_reverse": "Passion project, haste, scattered energy, delays, frustration",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-J2.png"
+        }
+    },
+    {
+        "pk": 77,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "Queen of Wands",
+            "value_id": 13,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Courage, confidence, independence, social butterfly, determination",
+            "meaning_reverse": "Self-respect, self-confidence, introverted, re-establish sense of self",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-QU.png"
+        }
+    },
+    {
+        "pk": 78,
+        "model": "tarot_journal_api.card",
+        "fields": {
+            "name": "King of Wands",
+            "value_id": 14,
+            "element_id": 4,
+            "major_arcana": false,
+            "meaning_upright": "Natural-born leader, vision, entrepreneur, honour",
+            "meaning_reverse": "Impulsiveness, haste, ruthless, high expectations",
+            "url": "https://steve-p.org/cards/pix/RWSa-W-KI.png"
+        }
+    }
+]

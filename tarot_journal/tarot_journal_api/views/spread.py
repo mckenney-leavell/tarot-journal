@@ -1,0 +1,227 @@
+"""View module for handling requests about user spreads"""
+
+# spread = id, user_id, created_date, interpretation
+from django.http import HttpResponseServerError
+from rest_framework.viewsets import ViewSet
+from rest_framework.response import Response
+from rest_framework import serializers
+from rest_framework import status
+from django.contrib.auth.models import User
+from tarot_journal_api.models import Spread, SpreadCard
+from .spread_card import SpreadCardSerializer
+import datetime
+from operator import itemgetter
+
+class UserSpreadSerializer(serializers.ModelSerializer):
+    """JSON serializer"""
+
+    class Meta:
+        model = User
+        fields = ( 'id', 'first_name', 'last_name', )
+
+class SpreadSerializer(serializers.HyperlinkedModelSerializer):
+    """JSON serializer for user spreads"""
+    user = UserSpreadSerializer(many=False)
+    spread_cards = SpreadCardSerializer(many=True)
+
+    class Meta:
+        model = Spread
+        url = serializers.HyperlinkedIdentityField(
+            view_name='spread',
+            lookup_field='id'
+        )
+        fields = (
+            'id',
+            'url',
+            'user',
+            'title',
+            'created_date',
+            'interpretation',
+            'ai_interpretation',
+            'spread_cards',
+        )
+
+class Spreads(ViewSet):
+    """View for interacting with user spreads"""
+
+    def retrieve(self, request, pk=None):
+        """
+        @api {GET} /spread/:id GET single spread
+        @apiName GetSpread
+        @apiGroup Spreads
+
+        @apiHeader {String} Authorization Auth token
+        @apiHeaderExample {String} Authorization
+            Token 9ba45f09651c5b0c404f37a2d2572c026c146611pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=
+
+        @apiSuccess (200) {id} id Spread id
+        @apiSuccess (200) {String} url Spread URI
+        @apiSuccess (200) {String} user User URI
+        @apiSuccess (200) {String} created_date Date spread was created
+        @apiSuccess (200) {String} interpretation User's interpretation input
+        
+
+        @apiSuccessExample {json} Success
+            {
+                "id": 1,
+                "url": "http://localhost:8000/spreads/1",
+                "user": "http://localhost:8000/users/3",
+                "title": "Career Spread",
+                "created_date": "2025-12-01",
+                "interpretation": "There are big changes coming your way--trust your intuition."
+            }
+        """
+        try:
+            user = request.auth.user
+            spread = Spread.objects.get(pk=pk, user=user)
+            serializer = SpreadSerializer(spread, context={"request": request})
+            return Response(serializer.data)
+        
+        except Spread.DoesNotExist:
+            return Response(
+                {
+                    "message": "The requested spread does not exist, or you do not have permission to access it."
+                },
+                status=status.HTTP_404_NOT_FOUND,
+            )
+        
+        except Exception as ex:
+            return HttpResponseServerError(ex)
+
+    def list(self, request):
+        """
+        @api {GET} /spreads GET user spreads
+        @apiName GetSpreads
+        @apiGroup Spreads
+
+        @apiHeader {String} Authorization Auth token
+        @apiHeaderExample {String} Authorization
+            Token 9ba45f09651c5b0c404f37a2d2572c026c146611pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P+zMAwpNgNbUZH/b9bgvdw=
+
+
+        @apiSuccess (200) {id} id Spread id
+        @apiSuccess (200) {String} url Spread URI
+        @apiSuccess (200) {String} user User URI
+        @apiSuccess (200) {String} created_date Date spread was created
+        @apiSuccess (200) {String} interpretation User's interpretation input
+
+        @apiSuccessExample {json} Success
+            [
+                {
+                    "id": 1,
+                    "url": "http://localhost:8000/spreads/1",
+                    "user": "http://localhost:8000/users/3"
+                    "title": "Career Spread"
+                    "created_date": "2025-12-01",
+                    "interpretation": "There are big changes coming your way--trust your intuition."
+                }
+            ]
+        """
+        user=request.auth.user
+        spreads = Spread.objects.filter(user=user).order_by('-created_date')
+    
+        json_spreads = SpreadSerializer(spreads, many=True, context={"request": request})
+
+        return Response(json_spreads.data)
+
+    def destroy(self, request, pk=None):
+        """
+            @api {DELETE} /spreads/:id DELETE product
+            @apiName DeleteSpread
+            @apiGroup Spread
+
+            @apiHeader {String} Authorization Auth token
+            @apiHeaderExample {String} Authorization
+                Token 9ba45f09651c5b0c404f37a2d2572c026c146611pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P
+
+            @apiParam {id} id Spread Id to delete
+            @apiSuccessExample {json} Success
+                HTTP/1.1 204 No Content
+        """
+        try:
+            user = request.auth.user
+            spread = Spread.objects.get(pk=pk, user=user)
+            spread.delete()
+
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
+        
+        except Spread.DoesNotExist as ex:
+            return Response({"message": ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        
+        except Exception as ex:
+            return Response({"message": ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    def update(self, request, pk=None):
+        """
+        @api {PUT} /spread/:id PUT changes for spread
+        @apiName UpdateSpread
+        @apiGroup Spreads
+
+        @apiHeader {String} Authorization Auth token
+        @apiHeaderExample {String} Authorization
+            Token 9ba45f09651c5b0c404f37a2d2572c026c146611pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P
+
+        @apiParam {id} id Spread Id route parameter
+
+        @apiSuccessExample {json} Success
+            HTTP/1.1 204 No Content
+        """
+                
+        try:
+            # user = request.auth.user
+            spread = Spread.objects.get(pk=pk)
+            spread.title = request.data["title"]
+            spread.interpretation = request.data["interpretation"]
+            spread.ai_interpretation = request.data.get("ai_interpretation", spread.ai_interpretation)
+
+            spread.save()
+
+            return Response({}, status=status.HTTP_204_NO_CONTENT)
+
+        except Spread.DoesNotExist as ex:
+            return Response({"message": ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        
+        except Exception as ex:
+            return Response({"message": ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+    def create(self, request):
+        """
+        @api {POST} /spread POST new spread
+        @apiName CreateSpreadCard
+        @apiGroup SpreadCard
+
+        @apiHeader {String} Authorization Auth token
+        @apiHeaderExample {String} Authorization
+            Token 9ba45f09651c5b0c404f37a2d2572c026c146611pbkdf2_sha256$150000$fHDURJBIASpx$trZS1MWc6YiNe5EYNBap+P
+
+        @apiSuccess (200) {Object} spread Created spread
+        @apiSuccess (200) {id} spread.id spread Id
+        @apiSuccess (200) {Object} spread.interpretation User interpretation of spread meaning
+        @apiSuccess (200) {Object} spread.user User who created spread
+        @apiSuccess (200) {Object} spread.title Title of spread
+        @apiSuccess (200) {Object} spread.created_date Date when spread was created
+        @apiSuccessExample {json} Success
+            {
+                "id": 12,
+                "url": "http://localhost:8000/spreads/12",
+                "interpretation": "User interpretation of spread",
+                "user": 3,
+                "title": "Spread Title",
+                "create_date": "2025-12-20"
+            }                
+
+        """
+
+        new_spread = Spread()
+        new_spread.interpretation = request.data["interpretation"]
+        new_spread.title = request.data["title"]
+        new_spread.created_date = datetime.date.today()
+
+        creator = request.auth.user
+        new_spread.user = creator
+
+        new_spread.save()
+
+        serializer = SpreadSerializer(new_spread, context={"request": request})
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
