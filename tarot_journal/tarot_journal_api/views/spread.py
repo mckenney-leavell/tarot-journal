@@ -31,12 +31,13 @@ class SpreadSerializer(serializers.HyperlinkedModelSerializer):
             lookup_field='id'
         )
         fields = (
-            'id', 
+            'id',
             'url',
             'user',
             'title',
-            'created_date', 
+            'created_date',
             'interpretation',
+            'ai_interpretation',
             'spread_cards',
         )
 
@@ -171,6 +172,7 @@ class Spreads(ViewSet):
             spread = Spread.objects.get(pk=pk)
             spread.title = request.data["title"]
             spread.interpretation = request.data["interpretation"]
+            spread.ai_interpretation = request.data.get("ai_interpretation", spread.ai_interpretation)
 
             spread.save()
 

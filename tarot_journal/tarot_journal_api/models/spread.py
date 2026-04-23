@@ -18,3 +18,5 @@ class Spread(models.Model):
     )
 
     interpretation = models.TextField()
+
+    ai_interpretation = models.TextField(blank=True, default='')
